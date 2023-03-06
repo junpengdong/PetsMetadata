@@ -1,0 +1,8 @@
+{
+  "name": "Pet Traders",
+  "description": "It is a cute pet trader with chat function that can help you manage your finances on cryptocurrency exchanges.",
+  "image": "",
+  "external_link": "",
+  "seller_fee_basis_points": 500, 
+  "fee_recipient": "0xFF7413D0915b6572c73d20fDb5f0b529e4cCdF60"
+}
