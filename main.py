@@ -9,13 +9,14 @@ if __name__ == '__main__':
 
 
     for file in files:
-        nameArr = file.split(".")[0].split("-")
+        name = file.split(".")[0]
+        nameArr = name.split("-")
         lv = nameArr[0]
         ind = int(nameArr[1])
         json_dict = {
             "name": "PetTrader #%s" % ind,
             "description": "It is a cute pet trader with chat function that can help you manage your finances on cryptocurrency exchanges.",
-            "image": "",
+            "image": "https://raw.githubusercontent.com/junpengdong/PetsMetadata/master/Images/%s" % file,
             "attributes": [
                 {
                     "trait_type": "lv",
@@ -23,8 +24,7 @@ if __name__ == '__main__':
                 }
             ]
         }
+        with open("./TokenMetadata/%s.json" % name, "w") as dump_f:
+            json.dump(json_dict, dump_f)
 
-    # with open("../config/record.json", "w") as dump_f:
-    #     json.dump(load_dict, dump_f)
-    #
-    # print("加载入文件完成...")
+        print("加载入文件完成...")
