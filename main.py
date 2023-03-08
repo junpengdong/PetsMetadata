@@ -24,7 +24,7 @@ if __name__ == '__main__':
                 }
             ]
         }
-        with open("./TokenMetadata/%s.json" % name, "w") as dump_f:
+        with open("./TokenMetadata/%s.json" % ind, "w") as dump_f:
             json.dump(json_dict, dump_f)
 
         print("加载入文件完成...")
